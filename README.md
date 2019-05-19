@@ -165,8 +165,9 @@ npm run dev
       },
   另外，在APP中，需要有路由视图，
   写法如下
+  ```
   <router-view name="SliderBar"></router-view>
-
+  ```
 - 获取信息
 
   大致同UserInfo，通过loginname
@@ -175,7 +176,9 @@ npm run dev
 - 加入router-link
 
   1.头像和名字加上路由，跳转到详情页
+
   2.主题加上router-link，跳转到不同的Article组件，注意，要在Article组件中加入监听
+
   3.无人回复的主题路由不仅要跳转到不同的Article组件，也要跳转到不同的sliderbar，前者参数是id，后者的参数是author.loginname
 
 ## router
@@ -191,7 +194,7 @@ npm run dev
 - UserInfo路由
 
   1.注意路由的path可以自己定义
-  
+
   2.注意路由的名字，需要是xxx_xxx
 
 ## asset
