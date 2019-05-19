@@ -40,8 +40,8 @@ npm run dev
 ### PostList
 
 使用v-if渲染loading.gif，当页面挂载未完成，isLoading为true，挂载完成，isLoading为true（后面考虑挂载在APP组件上）
-通过API获取首页信息，传递tab，page，limit参数
-调整样式，统一元素绑定不同的样式
+通过API获取首页信息，传递tab，page，limit参数,
+调整样式，统一元素绑定不同的样式,
 加入router-link并绑定参数，获取文章详情
 
 - 实现tab切换
@@ -71,8 +71,7 @@ npm run dev
 
 - 获取留言信息
 
-  1.暂时未解决svg放到vue中的问题
-  2.页面中显示作者，使用v-if或v-show
+  1.页面中显示作者，使用v-if或v-show
 
 - 加router-link
 
@@ -99,6 +98,7 @@ npm run dev
 	- topic部分
 
 	  1.用计算属性，仅返回5个topic，注意，计算属性没有参数，返回值直接在v-for中可供遍历
+
 	  2.关于icon-font图标的使用，需要将文件复制到本地，在src下新建文件夹，专门放icon文件，在main.js中引入，在对应文件中使用标签
 
 	- reply
@@ -109,22 +109,26 @@ npm run dev
 - 将页码放入数组
 
   1.将页码放入数组[1,2,3,4,5,'...']
+
   2.引入jQuery
+
   3.给页码绑定样式，当前页码为点击的页码，就加上active的样式，
+
   4.点击加上样式
-  ···
+  ```
   <div @click="changePage(page)">
   changePage(){
     this.currentPage = page
   }
-  ···
+  ```
   5.点击上一页，下一页，首页，跳转到页面
+  ```
   switch(page.currentTarget.innerHTML){
     case 'yyy'
     code...
     break;
   }
-
+  ```
 - 实现点击页码跳转页面
 
   1.首先，在pagination中触发事件，在PostList中接收事件，并且，将传过去的值作为自己的值
@@ -144,7 +148,7 @@ npm run dev
   用jq触发a标签失败
   a标签被触发click事件其实是因为里面的文字被点了，
   如果你直接$("a").click()
-  是无效的，你如果想要触发a标签，最好是在a标签里面加一个文字添加能被JS捕获的元素，比如加一个span，然后点击span，jQuery真的坑
+  是无效的，你如果想要触发a标签，最好是在a标签里面加一个文字添加能被JS捕获的元素，比如加一个span，然后点击span
 
 ### SiderBar
 
@@ -187,6 +191,7 @@ npm run dev
 - UserInfo路由
 
   1.注意路由的path可以自己定义
+  
   2.注意路由的名字，需要是xxx_xxx
 
 ## asset
